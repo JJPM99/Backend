@@ -15,9 +15,8 @@ import com.microservice.store.services.StoreService;
 public class StoreController {
 
 	@Autowired
-	@Qualifier("serviceFeign")
+	@Qualifier("serviceRest")
 	private StoreService storeService;
-	
 	
 	@GetMapping("/list")
 	public List<Store> list(){

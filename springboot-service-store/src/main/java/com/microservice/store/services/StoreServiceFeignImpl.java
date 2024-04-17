@@ -10,7 +10,6 @@ import com.microservice.store.client.CelularClientFeign;
 import com.microservice.store.models.Store;
 
 @Service("serviceFeign")
-
 public class StoreServiceFeignImpl implements StoreService {
 	
 	@Autowired

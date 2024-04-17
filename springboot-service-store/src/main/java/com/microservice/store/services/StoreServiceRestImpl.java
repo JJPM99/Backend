@@ -16,14 +16,13 @@ import com.microservice.store.models.Store;
 
 
 @Service("serviceRest")
-
 public class StoreServiceRestImpl implements StoreService {
 	@Autowired
 	private RestTemplate clientRest;
 	
 	@Override
 	public List<Store> findAll() {
-		List<Celular> celulares = Arrays.asList(clientRest.getForObject("http:/localhost:8081/list", Celular[].class));
+		List<Celular> celulares = Arrays.asList(clientRest.getForObject("http://localhost:8081/list", Celular[].class));
 		return celulares.stream().map(c -> new Store(c,5)).collect(Collectors.toList());
 	}
 
