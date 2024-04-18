@@ -1,10 +1,19 @@
-server: 
-      port: 8082
+server:
+  port: 8082
 spring:
-      application:
-        name: service-store
-
-eureka: 
-     client:  
-          service-url:
-            defaultZone: http://localhost:8761/eureka
+  application: 
+    name: service-store
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+ribbon:
+  ConnnectTimeout: 3000
+  ReadTimeout: 10000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2000

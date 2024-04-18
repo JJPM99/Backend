@@ -37,9 +37,19 @@ public class CelularController {
    
 	@GetMapping("/celular/{id}")
 	public Celular detail(@PathVariable Long id){
+		
+		try {
+			Thread.sleep(2000L);
+		}catch(InterruptedException e) {
+			e.printStackTrace();
+		}
+		
 		return service.findById(id);
+		   
+	
 	}
-	   
+	
+
    @DeleteMapping("/celular/{id}")
    public ResponseEntity<Void> drop(@PathVariable Long id){
 	   service.deleteById(id);
@@ -61,7 +71,7 @@ public class CelularController {
 		   return new ResponseEntity<>(cel, HttpStatus.OK);
 		   
 	   }else {
-		   return new ResponseEntity<>( HttpStatus.NOT_FOUND);
+		   return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 	   }
    }
 }
