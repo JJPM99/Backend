@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 @EntityScan({"com.microservice.commons.users.entity"})
 @SpringBootApplication
-public class SrpingbootServiceUsuariosApplication {
-
+public class SpringbootServiceUsuariosApplication {
+	
 	public static void main(String[] args) {
-		SpringApplication.run(SrpingbootServiceUsuariosApplication.class, args);
+		SpringApplication.run(SpringbootServiceUsuariosApplication.class, args);
 	}
 
 }

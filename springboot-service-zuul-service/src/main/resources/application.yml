@@ -16,7 +16,7 @@ zuul:
      service-id: service-celulares
      path: /api/phone/** 	  
     users:
-     service-id: service-usuarios
+     service-id: servicio-usuarios
      path: /api/us/**
 ribbon:
   ConnnectTimeout: 3000
@@ -27,4 +27,4 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 4000
+            timeoutInMilliseconds: 40000
